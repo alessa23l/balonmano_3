@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Aprende Balonmano! — Guía Interactiva para Niños</title>
+    <meta name="theme-color" content="#FF6B35">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkFwcmVuZGUgQmFsb25tYW5vIiwKICAic2hvcnRfbmFtZSI6ICJCYWxvbm1hbm9LaWRzIiwKICAic3RhcnRfdXJsIjogIi4iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNGRkY5RjAiLAogICJ0aGVtZV9jb2xvciI6ICIjRkY2QjM1Igp9">
+
+    <style>
+        body {
+            background-color: #FFF9F0;
+            color: #2B2D42;
+            font-family: 'Nunito', sans-serif;
+            font-size: 20px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Baloo 2', sans-serif;
+            font-weight: 800;
+        }
+
+        /* Continuous CSS Animations for Mascot Character */
+        .mascot-container {
+            font-size: 75px;
+            animation: bounce 2s infinite ease-in-out;
+            display: inline-block;
+        }
+        .mascot-wiggle {
+            animation: wiggle 3.5s infinite ease-in-out;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            20% { transform: rotate(7deg); }
+            80% { transform: rotate(-7deg); }
+        }
+
+        /* Prismic Effect: Kids Big Card Lift and Deep 3D Shadow Scale */
+        .kids-card {
+            background: #FFFFFF;
+            border: 4px solid #1B74E4;
+            border-radius: 24px;
+            padding: 26px;
+            box-shadow: 0 8px 0 #1B74E4;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .kids-card:hover {
+            transform: translateY(-7px) scale(1.02);
+            box-shadow: 0 15px 0 #1B74E4;
+        }
+
+        /* Prismic Effect: Step Slider Item Directional Shift */
+        .step-item {
+            background: #FFFFFF;
+            border-left: 8px solid #FF6B35;
+            border-radius: 14px;
+            padding: 18px;
+            margin-bottom: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .step-item:hover {
+            transform: translateX(10px);
+        }
+
+        .huge-goal-card {
+            background: #FFD60A;
+            border: 5px dashed #FF6B35;
+            border-radius: 30px;
+            padding: 40px;
+        }
+
+        .kid-btn {
+            background: #FFFFFF;
+            border: 3px solid #2B2D42;
+            border-radius: 18px;
+            padding: 16px;
+            margin-bottom: 14px;
+            width: 100%;
+            text-align: left;
+            font-weight: 700;
+            font-size: 21px;
+            box-shadow: 0 4px 0 #2B2D42;
+            transition: all 0.15s ease;
+        }
+        .kid-btn:hover {
+            background-color: #FFF1C5;
+        }
+        .kid-btn.correct { background-color: #2ECC71 !important; color: white !important; border-color: #27AE60 !important; box-shadow: 0 4px 0 #27AE60 !important; }
+        .kid-btn.wrong { background-color: #E74C3C !important; color: white !important; border-color: #C0392B !important; box-shadow: 0 4px 0 #C0392B !important; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .mascot-container, .mascot-wiggle { animation: none; }
+            .kids-card:hover, .step-item:hover { transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="text-center py-5" style="background-color: #FF6B35; color: white; border-bottom: 6px solid #2B2D42;">
+        <div class="container">
+            <div class="mascot-container">🦁</div>
+            <h1 class="display-3 text-white fw-bold">¡Aprende Balonmano!</h1>
+            <p class="fs-4 bg-warning text-dark d-inline-block px-4 py-1 rounded-pill fw-bold">¡La guía más divertida para campeones de primaria!</p>
+            <div class="mt-2"><a href="index.html" class="btn btn-dark btn-sm rounded-pill px-3 py-1">← Volver al Menú Central</a></div>
+        </div>
+    </header>
+
+    <main class="container py-5" style="max-width: 850px;">
+        
+        <section class="mb-5 text-center">
+            <div class="p-4 bg-white rounded-4 border border-3 border-dark d-inline-block text-start shadow-sm">
+                <h2 class="h4 text-primary mb-2"><span class="mascot-wiggle d-inline-block">👋</span> ¡Hola, soy Leo el León!</h2>
+                <p class="mb-0 fs-5">¿Te encantan los juegos de velocidad, saltos y lanzamientos? ¡Hoy descubriremos el balonmano! Es un deporte genial, muy fácil de jugar y donde todos somos importantes. ¡Acompáñame!</p>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="huge-goal-card text-center shadow">
+                <h2 class="display-2 text-danger fw-extrabold mb-2">¡¡¡METER GOLES!!! 🎯</h2>
+                <p class="fs-4 fw-bold mb-0">La meta más grande del balonmano es muy simple: Lanzar la pelota corriendo con tus manos para meterla dentro de la portería contraria. ¡Quien haga más goles gana el partido!</p>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="text-center text-primary mb-4">💡 Los 4 Súper Datos del Balonmano</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="kids-card">
+                        <h3 class="h4 text-primary">👥 ¡Somos 7 en la Pista!</h3>
+                        <p class="mb-0 fs-5">Cada equipo tiene 7 campeones jugando a la vez: ¡6 jugadores corriendo por toda la cancha para dar pases y 1 portero defendiendo!</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kids-card" style="border-color: #FFD60A; box-shadow: 0 8px 0 #FFD60A;">
+                        <h3 class="h4 text-warning" style="color: #CC9900 !important;">⏱️ ¿Cuánto dura?</h3>
+                        <p class="mb-0 fs-5">El partido es súper rápido. Se divide en dos tiempos de 30 minutos cada uno, con un descanso en medio para beber agua y descansar.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kids-card" style="border-color: #2ECC71; box-shadow: 0 8px 0 #2ECC71;">
+                        <h3>🖐️ Las Yemas Mágicas</h3>
+                        <p class="mb-0 fs-5">¡El balón nunca se abraza ni se esconde! Se controla y se lanza usando solamente las yemas de tus dedos. ¡Así vuela más rápido!</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="kids-card" style="border-color: #E74C3C; box-shadow: 0 8px 0 #E74C3C;">
+                        <h3 class="h4 text-danger">🚫 ¡Nadie Pisa el Área!</h3>
+                        <p class="mb-0 fs-5">La línea de los 6 metros dibuja la casa del portero. Ningún otro jugador puede pisarla. ¡Si quieres lanzar, debes tirar antes de pisar la línea!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="text-dark mb-4">🏃‍♂️ Los 3 Pasos para ser un Crack</h2>
+            <div class="step-item">
+                <h3 class="h5 text-danger">1. Atrapa y Controla</h3>
+                <p class="mb-0 fs-5 text-muted">Sujeta fuerte el balón de cuero con tus dedos. ¡Mira a tus amigos para ver quién está libre!</p>
+            </div>
+            <div class="step-item" style="border-left-color: #1B74E4;">
+                <h3 class="h5 text-primary">2. Avanza y Bota</h3>
+                <p class="mb-0 fs-5 text-muted">Puedes correr dando un máximo de tres pasos con el balón en las manos. Si quieres correr más, ¡tienes que botarlo contra el suelo!</p>
+            </div>
+            <div class="step-item" style="border-left-color: #2ECC71;">
+                <h3 class="h5 text-success">3. ¡Salta y Dispara!</h3>
+                <p class="mb-0 fs-5 text-muted">Da un salto gigante por el aire antes del área para ganar altura y lanza con fuerza para meter un golazo.</p>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white shadow-sm" style="border: 4px solid #2B2D42; border-radius: 24px;">
+            <div class="container" id="quiz-kids-section">
+                <h2 class="text-center text-danger mb-4">🎮 ¡El Desafío Divertido de Leo!</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-10 px-4">
+                        <p id="kid-question" class="fs-4 fw-bold text-center mb-4">Cargando la primera pregunta...</p>
+                        <div id="kid-options" aria-live="polite"></div>
+                        <div id="kid-feedback" class="text-center fw-bold fs-4 mt-3" aria-live="assertive"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-4" style="background: #2B2D42; color: #FFF; border-top: 4px solid #FF6B35;">
+        <div class="container">
+            <p class="mb-1">¡Aprende Balonmano! - Recurso Digital Educativo para Escuelas Primarias</p>
+            <p class="mb-0">Creado por: <strong>[Tu Nombre y Apellido]</strong> · Curso de Diseño Instruccional · 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inline Kids Service Worker Registration
+        const swCodeKids = `
+            self.addEventListener('install', e => self.skipWaiting());
+            self.addEventListener('fetch', e => e.respondWith(fetch(e.request)));
+        `;
+        const blobKids = new Blob([swCodeKids], {type: 'application/javascript'});
+        const swUrlKids = URL.createObjectURL(blobKids);
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register(swUrlKids).catch(err => console.log('Bypassed'));
+        }
+
+        // Banco de preguntas simplificado para niños
+        const kidsQuestions = [
+            {
+                q: "¿Cuántos campeones juegan al mismo tiempo en el campo por cada equipo?",
+                o: ["¡Son 11 jugadores como en el fútbol!", "¡Juegan 7 jugadores en total!", "Solo entran 3 jugadores"],
+                a: 1,
+                m: "¡Exacto! Son 6 corriendo por la pista dando pases y 1 portero genial cuidando la meta."
+            },
+            {
+                q: "¿Con qué parte de tu mano debes controlar el balón para lanzar como un profesional?",
+                o: ["Escondiéndolo con el codo", "Abrazándolo con todo el brazo", "Con las yemas de tus dedos mágicos"],
+                a: 2,
+                m: "¡Eso es! Controlar el balón con las yemas te ayuda a dar pases perfectos y rápidos."
+            }
+        ];
+
+        let kidIdx = 0;
+        function loadKidQuestion() {
+            const data = kidsQuestions[kidIdx];
+            document.getElementById('kid-question').textContent = data.q;
+            document.getElementById('kid-feedback').textContent = "";
+            const box = document.getElementById('kid-options');
+            box.innerHTML = "";
+
+            data.o.forEach((opt, idx) => {
+                const b = document.createElement('button');
+                b.className = "kid-btn";
+                b.textContent = opt;
+                b.onclick = () => {
+                    const allBtns = box.querySelectorAll('.kid-btn');
+                    allBtns.forEach((btn, bIdx) => {
+                        btn.disabled = true;
+                        if(bIdx === data.a) btn.classList.add('correct');
+                        if(bIdx === idx && idx !== data.a) btn.classList.add('wrong');
+                    });
+                    
+                    const fb = document.getElementById('kid-feedback');
+                    if(idx === data.a) {
+                        fb.innerHTML = "🎉 ¡Eres un campeón! " + data.m;
+                        fb.style.color = "#2ECC71";
+                    } else {
+                        fb.innerHTML = "🎈 ¡Casi! Pero no te preocupes, sigue aprendiendo. " + data.m;
+                        fb.style.color = "#E74C3C";
+                    }
+                    
+                    // Rotación guiada automática cada 4.5 segundos
+                    setTimeout(() => {
+                        kidIdx = (kidIdx + 1) % kidsQuestions.length;
+                        loadKidQuestion();
+                    }, 4500);
+                };
+                box.appendChild(b);
+            });
+        }
+        window.onload = loadKidQuestion;
+    </script>
+</body>
+</html>

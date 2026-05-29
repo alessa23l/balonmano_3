@@ -1,0 +1,138 @@
+# 🚀 SUPER PROMPT — Infografía PWA Interactiva sobre Balonmano para Niños
+
+---
+
+## 🎯 ROL Y CONTEXTO
+
+Eres un experto en **desarrollo web front-end** (HTML5 · CSS3 · JavaScript vanilla) y en **diseño instruccional para educación primaria**. Crearás una **aplicación web progresiva (PWA)** completamente funcional como único archivo `.html` autocontenido, sin dependencias de servidor ni archivos externos.
+
+---
+
+## 📋 NOMBRE DE LA APLICACIÓN
+
+`¡Aprende Balonmano!` — Infografía interactiva para niños
+
+---
+
+## 🎓 PROPÓSITO PEDAGÓGICO (basado en criterios Mayer)
+
+La infografía digital debe:
+
+1. **Transmitir UNA sola idea central** → El objetivo del balonmano: marcar goles.
+2. **Presentar solo 3 a 5 datos clave** con vocabulario simple y directo (ej.: 7 jugadores por equipo, 3 pasos máximo, 30 minutos por tiempo, zona de 6 metros del portero).
+3. **Usar narrativa y personaje-guía** → Una mascota animada (ej.: un león) que guía al niño con preguntas directas y tono lúdico.
+4. **Estructura visual lineal de arriba hacia abajo** → Sin menús complejos. Solo desplazamiento vertical.
+5. **Eliminar todo elemento decorativo sin función didáctica** (Principio de Coherencia de Mayer).
+
+---
+
+## 👦 PÚBLICO OBJETIVO
+
+Niños y niñas de **8 a 12 años** (educación primaria / nivel inicial-primario).
+
+---
+
+## 🎨 ESTILO VISUAL Y DISEÑO
+
+| Elemento | Especificación |
+|---|---|
+| **Tipografía** | Sans-serif redondeadas: `Baloo 2` (títulos) + `Nunito` (cuerpo), mínimo 18–24px |
+| **Colores** | Máximo 4–5 colores: naranja `#FF6B35`, amarillo `#FFD60A`, azul `#1B74E4`, verde `#2ECC71`, rojo `#E74C3C` |
+| **Estilo gráfico** | Flat / cartoon con emojis como ilustraciones figurativas |
+| **Estructura** | Cards grandes, numeraciones, pasos secuenciales, SVG del campo deportivo |
+| **Contraste** | Alto contraste entre fondo y texto para lectura fácil |
+| **Fondo** | Cálido y limpio: `#FFF9F0` |
+
+---
+
+## ⚡ INTERACCIONES Y ANIMACIONES CSS
+
+Incluir los siguientes efectos:
+
+- **Mascota animada** → `@keyframes bounce` (efecto de salto suave y continuo)
+- **Cards con hover** → `transform: translateY(-6px) scale(1.02)` + `box-shadow` intensificado
+- **Steps con hover** → `transform: translateX(8px)` (desplazamiento lateral al pasar el cursor)
+- **Mascota-guía con wiggle** → `@keyframes wiggle` (movimiento de cabeceo cada 3 segundos)
+- **Quiz interactivo** → Botones con feedback visual: `.correct` (fondo blanco/verde) y `.wrong` (fondo rojo) + mensaje de resultado con `aria-live`
+- **Banner de instalación PWA** → entrada animada desde abajo con `transform: translateY(100px)` → `translateY(0)`
+- **Scroll suave** → `scroll-behavior: smooth` en el `html`
+
+---
+
+## 🗂️ SECCIONES OBLIGATORIAS (de arriba hacia abajo)
+
+1. **HERO** → Mascota animada + título grande + subtítulo con badge
+2. **BURBUJA GUÍA** → Personaje mascota presenta el contenido con pregunta directa
+3. **IDEA CENTRAL** → Card con el concepto principal: "GOL" en tamaño enorme
+4. **DATOS CLAVE** → Grid de 4 cards con los datos más importantes del deporte
+5. **PASOS PARA ANOTAR** → 3 pasos numerados secuencialmente
+6. **EL CAMPO** → SVG del campo deportivo con medidas y jugadores representados
+7. **EL PORTERO** → Card destacada sobre el jugador especial
+8. **QUIZ INTERACTIVO** → Banco de 4 preguntas rotativas con 4 opciones cada una
+9. **FOOTER** → Créditos con nombre del autor y frase motivadora
+
+---
+
+## 🔧 ESPECIFICACIONES TÉCNICAS
+
+```
+✅ Un único archivo HTML autocontenido
+✅ Bootstrap 5 cargado desde CDN (opcional, para grid responsivo)
+✅ Google Fonts: Baloo 2 + Nunito (via @import o <link>)
+✅ Service Worker inline (via Blob URL) para cache y uso offline
+✅ Web App Manifest embebido como <link rel="manifest"> con data URI
+✅ Meta theme-color para personalización de barra del navegador
+✅ Diseño mobile-first completamente responsivo (desde 375px)
+✅ Touch targets mínimo 44x44px en todos los botones
+✅ Accesibilidad: aria-label, aria-live, role, alt text, heading hierarchy
+✅ Semántica HTML5: <header>, <main>, <section>, <footer>
+✅ Sin localStorage (por restricciones de sandbox)
+✅ prefers-reduced-motion respetado
+```
+
+---
+
+## 🦶 FOOTER — INSTRUCCIÓN ESPECIAL PARA EL USUARIO
+
+> ⚠️ **IMPORTANTE:** Antes de entregar o publicar la aplicación, **reemplaza en el footer** el texto de créditos con **tu nombre y apellido completo**.
+
+Busca esta línea en el código HTML:
+
+```html
+<!-- ✏️ REEMPLAZA: escribe tu nombre y apellido aquí -->
+<p>Creado por: <strong>[Tu Nombre y Apellido]</strong></p>
+```
+
+Y cámbiala por, por ejemplo:
+
+```html
+<p>Creado por: <strong>Ana García López</strong></p>
+```
+
+El footer también puede incluir:
+- Nombre de la institución o universidad
+- Año de elaboración
+- Asignatura o curso correspondiente
+
+---
+
+## 📌 RESTRICCIONES DE DISEÑO (NO hacer)
+
+- ❌ No usar gradientes en botones (se verá como plantilla genérica)
+- ❌ No usar más de 5 colores en la UI principal
+- ❌ No agregar ilustraciones decorativas sin función didáctica
+- ❌ No saturar el diseño con texto largo (máximo 2–3 líneas por tarjeta)
+- ❌ No usar tipografías que no sean sans-serif redondeadas
+- ❌ No colocar menús de navegación complejos
+- ❌ No usar localStorage (sandbox incompatible)
+
+---
+
+## ✅ ENTREGA ESPERADA
+
+Un archivo llamado `balonmano-ninos.html` listo para abrirse en cualquier navegador moderno, funcionar offline como PWA instalable, y ser usado directamente en el aula o en dispositivos móviles de niños de primaria.
+
+---
+
+*Prompt elaborado para uso docente en diseño de infografías digitales interactivas.*
+*Contenido basado en la infografía de balonmano publicada por EL MUNDO (Coordina: F.A. Anguís · Textos: Carolina G. Miranda).*
